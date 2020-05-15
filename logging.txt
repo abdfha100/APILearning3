@@ -1,0 +1,110 @@
+Request method:	POST
+Request URI:	https://petstore.swagger.io/v2/pet/
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		accept=application/json
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "id": 555,
+    "name": "German Shepherd",
+    "status": "available",
+    "category": {
+        "id": 5,
+        "name": "categoryA"
+    },
+    "photoUrls": [
+        "string"
+    ]
+}
+HTTP/1.1 200 OK
+Date: Thu, 14 May 2020 06:55:52 GMT
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+Content-Type: application/json
+Connection: close
+Server: Jetty(9.2.9.v20150224)
+
+{
+    "id": 555,
+    "category": {
+        "id": 5,
+        "name": "categoryA"
+    },
+    "name": "German Shepherd",
+    "photoUrls": [
+        "string"
+    ],
+    "tags": [
+        
+    ],
+    "status": "available"
+}
+Request method:	GET
+Request URI:	https://petstore.swagger.io/v2/pet/555
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		accept=application/json
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Date: Thu, 14 May 2020 06:55:54 GMT
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+Content-Type: application/json
+Connection: close
+Server: Jetty(9.2.9.v20150224)
+
+{
+    "id": 555,
+    "category": {
+        "id": 5,
+        "name": "categoryA"
+    },
+    "name": "German Shepherd",
+    "photoUrls": [
+        "string"
+    ],
+    "tags": [
+        
+    ],
+    "status": "available"
+}
+Request method:	DELETE
+Request URI:	https://petstore.swagger.io/v2/pet/555
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		accept=application/json
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Date: Thu, 14 May 2020 06:55:56 GMT
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+Content-Type: application/json
+Connection: close
+Server: Jetty(9.2.9.v20150224)
+
+{
+    "code": 200,
+    "type": "unknown",
+    "message": "555"
+}

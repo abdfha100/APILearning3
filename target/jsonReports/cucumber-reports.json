@@ -1,0 +1,220 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-05-14T06:55:51.396Z",
+        "line": 13,
+        "name": "Verify if pet is being added succeffully using AddPet API",
+        "description": "",
+        "id": "validate-pet-apis;verify-if-pet-is-being-added-succeffully-using-addpet-api;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1231000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Add pet payload with 555 \"German Shepherd\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "555",
+                  "offset": 21
+                },
+                {
+                  "val": "\"German Shepherd\"",
+                  "offset": 25
+                }
+              ],
+              "location": "stepDefinitions.StepDefinition.add_pet_payload_with(int,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3337000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User calls \"AddPetAPI\" with \"POST\" http request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"AddPetAPI\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"POST\"",
+                  "offset": 28
+                }
+              ],
+              "location": "stepDefinitions.StepDefinition.user_calls_with_http_request(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 16000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "The API call got success with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 42
+                }
+              ],
+              "location": "stepDefinitions.StepDefinition.the_API_call_got_success_with_status_code(java.lang.Integer)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 686000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "\"status\" in the response body is \"available\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"status\"",
+                  "offset": 0
+                },
+                {
+                  "val": "\"available\"",
+                  "offset": 33
+                }
+              ],
+              "location": "stepDefinitions.StepDefinition.in_the_response_body_is(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1613000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "verify petId created maps to \"German Shepherd\" using \"GetPetAPI\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"German Shepherd\"",
+                  "offset": 29
+                },
+                {
+                  "val": "\"GetPetAPI\"",
+                  "offset": 53
+                }
+              ],
+              "location": "stepDefinitions.StepDefinition.verify_petId_created_maps_to_using(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@AddPet"
+          },
+          {
+            "name": "@Regression"
+          },
+          {
+            "name": "@Smoke"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-05-14T06:55:58.326Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepDefinitions.Hooks.beforeScenario()"
+            }
+          }
+        ],
+        "line": 18,
+        "name": "Verify if Delete PetAPI functionality is working",
+        "description": "",
+        "id": "validate-pet-apis;verify-if-delete-petapi-functionality-is-working",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "DeleltePetAPI paylod",
+            "match": {
+              "location": "stepDefinitions.StepDefinition.deleltepetapi_paylod()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1507000000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "User calls \"DeletePetAPI\" with \"Delete\" http request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"DeletePetAPI\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"Delete\"",
+                  "offset": 31
+                }
+              ],
+              "location": "stepDefinitions.StepDefinition.user_calls_with_http_request(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "The API call got success with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 42
+                }
+              ],
+              "location": "stepDefinitions.StepDefinition.the_API_call_got_success_with_status_code(java.lang.Integer)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@DeletePet"
+          },
+          {
+            "name": "@Regression"
+          }
+        ]
+      }
+    ],
+    "name": "Validate Pet APIs",
+    "description": "",
+    "id": "validate-pet-apis",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/features/petValidation.feature",
+    "tags": []
+  }
+]

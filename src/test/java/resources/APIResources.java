@@ -5,8 +5,8 @@ package resources;
 public enum APIResources {
 	
 	AddPetAPI("/v2/pet/"),
-	GetPetAPI("/v2/pet/"),
-	DelPetAPI("/v2/pet/");
+	GetPetAPI("/v2/pet/"),	
+	DeletePetAPI("/v2/pet/");
 	
 	private String resource;
 	
